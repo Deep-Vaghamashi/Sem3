@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <script>
+        let students = [
+  {
+    "name": "Rosemary Becker",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/755.jpg",
+    "phone": "593-774-1010 x42550",
+    "id": "1"
+  },
+  {
+    "name": "Sonya Heidenreich",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1045.jpg",
+    "phone": "1-414-560-1474 x2883",
+    "id": "2"
+  },
+  {
+    "name": "Gabriel Dicki",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/528.jpg",
+    "phone": "960-874-3300 x644",
+    "id": "3"
+  },
+  {
+    "name": "Monica Gislason",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1056.jpg",
+    "phone": "547.629.3320",
+    "id": "4"
+  },
+  {
+    "name": "Sidney Ullrich",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/620.jpg",
+    "phone": "(387) 646-6917",
+    "id": "5"
+  },
+  {
+    "name": "Mr. Curtis Runolfsson",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1222.jpg",
+    "phone": "864-522-7180 x08772",
+    "id": "6"
+  },
+  {
+    "name": "Alfredo Harvey",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/550.jpg",
+    "phone": "1-817-345-8377 x60568",
+    "id": "7"
+  },
+  {
+    "name": "Gregg Langosh",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1013.jpg",
+    "phone": "995-759-1581 x67065",
+    "id": "8"
+  },
+  {
+    "name": "Mrs. Jennie Romaguera",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/517.jpg",
+    "phone": "(578) 538-8867 x677",
+    "id": "9"
+  },
+  {
+    "name": "Arnold O'Reilly",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1022.jpg",
+    "phone": "888-858-9973",
+    "id": "10"
+  },
+  {
+    "name": "Jimmie Stokes",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/721.jpg",
+    "phone": "367-336-1716 x35108",
+    "id": "11"
+  },
+  {
+    "name": "Lori Ruecker",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/701.jpg",
+    "phone": "1-628-826-2718 x893",
+    "id": "12"
+  },
+  {
+    "name": "Lora Larson",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/354.jpg",
+    "phone": "827.211.0686 x42011",
+    "id": "13"
+  },
+  {
+    "name": "Mack Bernier",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/214.jpg",
+    "phone": "(438) 363-7908 x05965",
+    "id": "14"
+  },
+  {
+    "name": "Lillie Hauck",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/130.jpg",
+    "phone": "274-208-1297 x403",
+    "id": "15"
+  }
+]
+
+    for(let i = 0;i<students.length;i++){
+        document.write('<div class="card" style="width: 18rem;">');
+        document.write('<img src="'+students[i].avatar+'" class="card-img-top" alt="">');
+        document.write('<div class="card-body">');
+        document.write('Name:'+students[i].name+'<br>');
+        document.write('Id:'+students[i].id+'<br>');
+        document.write('Phone :'+students[i].phone+'<br>');
+        document.write('</div>');
+        document.write('</div>');
+    }
+    </script>
+</body>
+</html>
